@@ -54,7 +54,7 @@ p {
   background-color: white;
   padding: 60px;
   text-align: center;
-  box-shadow: 2px 1px 19px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px -11px 42px -11px rgba(179,69,179,0.86);
 
   #btn {
     padding: 10px 20px;
@@ -65,5 +65,11 @@ p {
     &:hover {
       scale: 1.1;
     }
+  }
+}
+
+label {
+  input {
+    /* display: none; */
   }
 }

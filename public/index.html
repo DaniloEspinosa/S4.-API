@@ -16,13 +16,19 @@
         <section class="card-chiste">
             <h1>Preparado para reir? 🤣</h1>
             <p id="chiste">Aqui va el chiste...</p>
-            <button id="btn">Siguiente chiste</button>
+            <form class="votation">
+                <div class="buttons-rating">
+                    <label><input type="checkbox" name="rating" id="bad" value="1"><span>😒</span></label>
+                    <label><input type="checkbox" name="rating" id="neutral" value="2"><span>😐</span></label>
+                    <label><input type="checkbox" name="rating" id="good" value="3"><span>🤣</span></label>
+                </div>
+                <button id="btn">Siguiente chiste</button>
+
+            </form>
+
         </section>
 
     </main>
-
-
-
 
     <script src="bundle.js"></script>
 </body>
