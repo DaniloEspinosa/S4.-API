@@ -24,6 +24,23 @@ body {
     opacity: 0.6;
   }
 }
+.weather {
+  display: flex;
+  background-color: gray;
+  color: white;
+  width: 200px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  border-radius: 10px;
+  span {
+    text-shadow: 1px 1px 3px black;
+  }
+  img {
+    filter: drop-shadow(1px 1px 3px black);
+  }
+}
 
 h1 {
   font-size: 1.5rem;
@@ -54,7 +71,7 @@ p {
   background-color: white;
   padding: 60px;
   text-align: center;
-  box-shadow: 4px -11px 42px -11px rgba(179,69,179,0.86);
+  box-shadow: 4px -11px 42px -11px rgba(179, 69, 179, 0.86);
 
   #btn {
     padding: 10px 20px;

@@ -1,7 +1,14 @@
 let reportAcudits: result[] = [];
+let city = "barcelona";
+const JOKES = "https://icanhazdadjoke.com/";
+const API_WEATHER = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=93b7d700335e20d50fbed4f29e09c2ea`;
 
 const chisteHtml = document.getElementById("chiste") as HTMLParagraphElement;
 const btnHtml = document.getElementById("btn") as HTMLButtonElement;
+const temperature = document.getElementById("temperature") as HTMLSpanElement;
+const imageTemperature = document.getElementById(
+  "image-temperature"
+) as HTMLImageElement;
 const inputs = document.querySelectorAll<HTMLInputElement>(
   'input[name="rating"]'
 );
@@ -22,9 +29,24 @@ inputs.forEach((item) => {
   });
 });
 
+async function fetchTemperature() {
+  try {
+    const response = await fetch(API_WEATHER);
+    const data = await response.json();
+    let temp = (Number(data.main.temp) - 273.15).toFixed(2) + "ºC";
+    let icon = data.weather[0].icon;
+    let alt = data.weather[0].description;
+
+    return { temp, icon, alt };
+  } catch (error) {
+    console.error("Error al obtener el clima:", error);
+    return null;
+  }
+}
+
 async function fetchDatos() {
   try {
-    const response = await fetch("https://icanhazdadjoke.com/", {
+    const response = await fetch(JOKES, {
       headers: {
         Accept: "application/json",
       },
@@ -43,6 +65,17 @@ async function fetchDatos() {
 
 (async () => {
   chisteHtml.textContent = await fetchDatos();
+  const datosTemp = await fetchTemperature();
+  if (datosTemp) {
+    temperature.textContent = datosTemp.temp;
+    imageTemperature.setAttribute(
+      "src",
+      `https://openweathermap.org/img/w/${datosTemp.icon}.png`
+    );
+    imageTemperature.setAttribute("alt", datosTemp.alt);
+  } else {
+    temperature.textContent = "Error obteniendo la temperatura";
+  }
 })();
 
 btnHtml.addEventListener("click", async (e) => {
@@ -66,6 +99,7 @@ function votation(joke: string | null) {
   reportAcudits.push(results);
 }
 
+//Una vez pasamos al siguiente chiste se formatea la votación
 function cleanVotation() {
   inputs.forEach((item) => (item.checked = false));
 }
