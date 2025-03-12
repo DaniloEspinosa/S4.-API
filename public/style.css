@@ -26,19 +26,37 @@ body {
 }
 .weather {
   display: flex;
-  background-color: gray;
-  color: white;
-  width: 200px;
-  height: 50px;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
+  background-color: lightslategray;
+  width: 200px;
+  height: 90px;
   margin: 20px;
+  padding: 10px;
   border-radius: 10px;
-  span {
-    text-shadow: 1px 1px 3px black;
-  }
+
   img {
     filter: drop-shadow(1px 1px 3px black);
+    width: 80px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    color: white;
+
+    text-shadow: 1px 1px 3px black;
+  }
+  span {
+    color: rgb(34, 214, 214);
+
+    text-shadow: 1px 1px 3px black;
+    font-size: 1.2rem;
   }
 }
 
