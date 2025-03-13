@@ -1,5 +1,6 @@
 import { result } from "./interfaces/result";
 import { fetchChuck, fetchJokes, fetchJokesApi, fetchTemperature, randomJoke } from "./utils/fetchFunctions";
+import { randomPattern } from "./utils/functions";
 
 let reportAcudits: result[] = [];
 
@@ -11,6 +12,7 @@ const imageTemp = document.getElementById("image-temp") as HTMLImageElement;
 const inputs = document.querySelectorAll<HTMLInputElement>(
   'input[name="rating"]'
 );
+const cardForm = document.getElementById("card-form")
 
 inputs.forEach((item) => {
   item.addEventListener("change", () => {
@@ -26,6 +28,8 @@ btnHtml.addEventListener("click", async (e) => {
   e.preventDefault();
   votation(chisteHtml.textContent);
   chisteHtml.textContent = await randomJoke(reportAcudits);
+  cardForm?.setAttribute("class", `card-chiste ${randomPattern()}`)
+
   cleanVotation();
 });
 
@@ -46,8 +50,10 @@ const cleanVotation = () => {
   inputs.forEach((item) => (item.checked = false));
 };
 
+
 (async () => {
   chisteHtml.textContent = await randomJoke(reportAcudits);
+  cardForm?.setAttribute("class", `card-chiste ${randomPattern()}`)
   const datosTemp = await fetchTemperature();
   if (datosTemp) {
     temperature.textContent = datosTemp.temp;

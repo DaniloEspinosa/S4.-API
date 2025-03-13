@@ -11,33 +11,39 @@
 
 <body>
 
-    <header>
-        <div class="weather">
-            <div class="info">
-                <p id="city-name">Ciudad</p>
-                <span id="temperature">20º</span>
-            </div>
-            <img id="image-temp">
-
-        </div>
-
-    </header>
-
     <main class="container">
-        <section class="card-chiste">
-            <h1>Preparado para reir? 🤣</h1>
+
+        <header>
+            <div class="weather">
+                <div class="info">
+                    <p id="city-name">Ciudad</p>
+                    <span id="temperature">20º</span>
+                </div>
+                <img id="image-temp">
+            </div>
+
+        </header>
+
+
+        <section class="card-chiste magicpattern" id="card-form">
+            <h1>Ready to laugh?</h1>
             <p id="chiste">Aqui va el chiste...</p>
             <form class="votation">
                 <div class="buttons-rating">
-                    <label><input type="checkbox" name="rating" id="bad" value="1"><span>😒</span></label>
-                    <label><input type="checkbox" name="rating" id="neutral" value="2"><span>😐</span></label>
-                    <label><input type="checkbox" name="rating" id="good" value="3"><span>🤣</span></label>
+                    <label><input type="checkbox" name="rating" id="bad" value="1"><img class="icon-emoji"
+                            src="./images/cara-triste.png" alt="emoji cara triste"></label>
+                    <label><input type="checkbox" name="rating" id="neutral" value="2"><img class="icon-emoji"
+                            src="./images/neutral-face.png" alt="emoji cara neutra"></label>
+                    <label><input type="checkbox" name="rating" id="good" value="3"><img class="icon-emoji"
+                            src="./images/feliz.png" alt="emoji cara riendo"></label>
                 </div>
                 <button id="btn">Siguiente chiste</button>
 
             </form>
 
         </section>
+
+
 
     </main>
 
