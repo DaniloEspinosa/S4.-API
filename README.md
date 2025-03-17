@@ -1,5 +1,9 @@
 ## API de Chistes
-Esta es una API sencilla que proporciona chistes al azar. Lo cuales pueden ser valorados o no al clickar para ver el siguiente chiste.
+
+Esta es una API sencilla que proporciona chistes al azar. Lo cuales pueden ser valorados o no al clickar para ver el siguiente chiste. Tambien en caso de haber seleccionado por error la votación esta se puede quitar.
+En el siguiente enlace puedes ver la web desplegada en github pages.
+
+https://daniloespinosa.github.io/S4.-API/
 
 ### Manera de usarla
 Para poder utilizarla hay que descargar este repositorio como paso inicial.
