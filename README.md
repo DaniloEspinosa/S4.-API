@@ -14,7 +14,7 @@ Una vez descargada debemos ubicarnos dentro de la carpeta con la linea de comand
 
 Una vez instaladas todas las dependencias solo necesitas ejecutar en la linea de comandos:
 
-- **npm run serve**
+- **npm start**
   
 Una vez realizado esto podras acceder a la aplicacion en esta ruta:
 

@@ -7,11 +7,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --open",
     "serve": "webpack-dev-server",
     "build": "webpack --mode production",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
     "gh-pages": "^6.3.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
