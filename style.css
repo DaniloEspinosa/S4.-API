@@ -213,7 +213,7 @@ p {
   background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M855 694.5Q725 889 499.5 890t-341-194.5Q43 500 177.5 337T490 191.5q178 17.5 336.5 163t28.5 340Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%239071bb%22 d=%22M855 694.5Q725 889 499.5 890t-341-194.5Q43 500 177.5 337T490 191.5q178 17.5 336.5 163t28.5 340Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1536px) {
   h1 {
     font-size: 1.3rem;
   }
@@ -233,7 +233,7 @@ p {
   }
 
   .container {
-    height: 740px;
+    height: 730px;
     width: 740px;
   }
 
@@ -308,7 +308,7 @@ p {
   }
 
   .container {
-    height: 100%;
+    height: 100vh;
     width: 100%;
   }
 
